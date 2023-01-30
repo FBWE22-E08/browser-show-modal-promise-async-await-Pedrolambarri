@@ -31,8 +31,14 @@ span.addEventListener("click", () => {
 const continueButton = () => {
     return new Promise((resolve) => {
         btn.addEventListener("animationend", () => {
-            resolve(btn.style.background = "red", alert("Continue to suscribe"));
-        })
+            alert("Continue to subscribe"); 
+        });
+        btn.addEventListener("mouseover", () => {
+            btn.style.backgroundColor = "red";   
+        });
+        btn.addEventListener("mouseout", () => {
+            btn.style.backgroundColor = "";  
+        });
     });
 };
 
